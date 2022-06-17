@@ -11,8 +11,8 @@ namespace PHPPdf\Core\Engine\ZF;
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Exception\InvalidResourceException;
 use PHPPdf\Core\Engine\AbstractFont;
-use ZendPdf\Font as ZendFont;
-use ZendPdf\Exception\ExceptionInterface;
+use LaminasPdf\Font as ZendFont;
+use LaminasPdf\Exception\ExceptionInterface;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>
@@ -57,7 +57,7 @@ class Font extends AbstractFont
 
     private static function retrieveFontName($name)
     {
-        $const = sprintf('ZendPdf\Font::FONT_%s', str_replace('-', '_', strtoupper($name)));
+        $const = sprintf('ZendFont::FONT_%s', str_replace('-', '_', strtoupper($name)));
 
         if (!defined($const))
         {

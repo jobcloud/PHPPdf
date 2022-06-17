@@ -8,13 +8,11 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Point;
-
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\Boundary,
-    PHPPdf\Core\Node\ColumnableContainer,
-    PHPPdf\Core\Node\Container;
+use PHPPdf\Core\Boundary;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node\ColumnableContainer;
+use PHPPdf\Core\Node\Container;
+use PHPPdf\Core\Node\Node;
 
 /**
  * Formats columnable container, breaks containers into columns. 

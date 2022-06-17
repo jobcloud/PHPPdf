@@ -8,10 +8,9 @@
 
 namespace PHPPdf\Core\Node;
 
+use PHPPdf\Core\Document;
 use PHPPdf\Core\DrawingTaskHeap;
-
-use PHPPdf\Core\Document,
-    PHPPdf\Core\Node\Paragraph\Line;
+use PHPPdf\Core\Node\Paragraph\Line;
 
 /**
  * Paragraph element

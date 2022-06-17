@@ -8,14 +8,11 @@
 
 namespace PHPPdf\Core\Node;
 
+use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTask;
 use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Core\Node\BasicList\EnumerationStrategy;
 use PHPPdf\Core\Node\BasicList\EnumerationStrategyFactory;
-use PHPPdf\Core\Node\BasicList\ImageEnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\EnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\OrderedEnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\UnorderedEnumerationStrategy,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\DrawingTask;
 
 /**
  * Class of the list element

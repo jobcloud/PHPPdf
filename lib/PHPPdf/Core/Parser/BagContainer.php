@@ -8,8 +8,8 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Core\Node\Node;
 use PHPPdf\Core\AttributeBag;
+use PHPPdf\Core\Node\Node;
 
 /**
  * Class to encapsulate two bags: AttributeBag and ComplexAttributeBag

@@ -9,11 +9,11 @@
 namespace PHPPdf\Core\Node;
 
 use PHPPdf\Core\ComplexAttribute\Background;
-use PHPPdf\Util;
-use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\DrawingTask;
 use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTask;
 use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Exception\InvalidArgumentException;
+use PHPPdf\Util;
 
 /**
  * Barcode node class
@@ -189,16 +189,16 @@ class Barcode extends Node
             ));
             
             return $barcode;
-        }
-        catch(\Zend\Barcode\Exception $e)
-        {
-            throw new InvalidArgumentException('Invalid arguments passed to barcode, see cause exception for more details.', $previous->getCode(), $e);
+        } catch (\Exception $e) {
+            throw new InvalidArgumentException(
+                'Invalid arguments passed to barcode, see cause exception for more details.', $e->getCode(), $e
+            );
         }
     }
     
     private function convertBarcodeColor(Document $document, $color)
     {
-        return strtoupper($document->getColorFromPalette($color));;
+        return strtoupper($document->getColorFromPalette($color));
     }
     
     private function getOrientation()

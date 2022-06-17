@@ -8,12 +8,10 @@
 
 namespace PHPPdf\Core\Node\Table;
 
-use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\Document;
-use PHPPdf\Core\Node\Table\Cell;
 use PHPPdf\Core\Node\Container;
 use PHPPdf\Core\Node\Listener;
 use PHPPdf\Core\Node\Node;
+use PHPPdf\Exception\InvalidArgumentException;
 
 /**
  * Row of the table

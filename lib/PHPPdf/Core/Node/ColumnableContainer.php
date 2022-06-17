@@ -8,9 +8,9 @@
 
 namespace PHPPdf\Core\Node;
 
+use PHPPdf\Core\Document;
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Util;
-use PHPPdf\Core\Document;
 
 /**
  * Container being able to format as columns

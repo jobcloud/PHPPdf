@@ -9,8 +9,7 @@
 namespace PHPPdf\Core\Node\BasicList;
 
 use PHPPdf\Core\Document;
-use PHPPdf\Core\Engine\GraphicsContext,
-    PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\Node\BasicList;
 
 /**
  * This enumeration strategy uses ordered sequence of chars (letters, numbers etc.) as enumeration element

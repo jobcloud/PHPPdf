@@ -8,9 +8,7 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Formatter\Formatter,
-    PHPPdf\Core\Node as Nodes,
-    PHPPdf\Core\Formatter\Chain;
+use PHPPdf\Core\Node as Nodes;
 
 /**
  * Sets chain to children nodes

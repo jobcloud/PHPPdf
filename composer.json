@@ -1,33 +1,43 @@
 {
     "name": "jobcloud/psliwa-php-pdf",
     "description": "Pdf and graphic files generator library for PHP.",
-    "keywords": ["PDF", "PHPPdf"],
+    "keywords": [
+        "PDF",
+        "PHPPdf"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name":     "Piotr Śliwa",
+            "name": "Piotr Śliwa",
             "homepage": "http://ohey.pl",
-            "email":    "peter.pl7@gmail.com"
+            "email": "peter.pl7@gmail.com"
         }
     ],
     "require": {
-        "zendframework/zendpdf": "~2.0.0",
-        "laminas/laminas-cache": "^2.0",
-        "laminas/laminas-zendframework-bridge": "^1.1"
+        "php": "^8.1",
+        "laminas/laminas-zendframework-bridge": "^1.5",
+        "nmiles/laminas-pdf": "^3.0",
+        "laminas/laminas-cache": "^3.1",
+        "laminas/laminas-cache-storage-adapter-filesystem": "^2.0",
+        "ext-iconv": "*",
+        "ext-mbstring": "*"
     },
     "require-dev": {
-        "laminas/laminas-barcode": "^2.0",
-        "laminas/laminas-validator": "^2.0",
+        "laminas/laminas-barcode": "^2.11",
+        "laminas/laminas-validator": "^2.20",
         "imagine/imagine": ">=0.2.0,<0.6.0",
         "phpunit/phpunit": ">=4,<5.4.0"
     },
     "suggest": {
-    	"laminas/laminas-barcode":  "If you want to use barcodes",
-    	"laminas/laminas-validator": "If you want to use barcodes (required by zend-barcode)",
-    	"imagine/imagine": "If you want to use image generating (required version: >=v0.2.6)"
+        "laminas/laminas-barcode": "If you want to use barcodes",
+        "laminas/laminas-validator": "If you want to use barcodes (required by zend-barcode)",
+        "imagine/imagine": "If you want to use image generating (required version: >=v0.2.6)"
     },
     "autoload": {
-        "psr-0": { "PHPPdf": "lib/", "Imagine": "lib/" }
+        "psr-0": {
+            "PHPPdf": "lib/",
+            "Imagine": "lib/"
+        }
     }
 }

@@ -8,14 +8,11 @@
 
 namespace PHPPdf\Core\ComplexAttribute;
 
-use Zend\Code\Generator\DocBlockGenerator;
-
-use PHPPdf\Core\Node\Page,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Boundary,
-    PHPPdf\Core\UnitConverter,
-    PHPPdf\Core\Engine\GraphicsContext,
-    PHPPdf\Core\Document;
+use PHPPdf\Core\Boundary;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Engine\GraphicsContext;
+use PHPPdf\Core\Node\Node;
+use PHPPdf\Core\UnitConverter;
 
 /**
  * Enhance node by drawing border

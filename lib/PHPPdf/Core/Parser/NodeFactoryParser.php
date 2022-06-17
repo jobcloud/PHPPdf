@@ -8,10 +8,10 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Parser\XmlParser;
-use PHPPdf\Core\UnitConverter;
 use PHPPdf\Core\Node\NodeFactory;
+use PHPPdf\Core\UnitConverter;
 use PHPPdf\Parser\Exception\ParseException;
+use PHPPdf\Parser\XmlParser;
 
 /**
  * Parser for node config file

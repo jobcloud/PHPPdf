@@ -8,14 +8,14 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Parser\Parser;
-use PHPPdf\DataSource\DataSource;
 use PHPPdf\Bridge\Markdown\MarkdownParser;
-use PHPPdf\Core\Document;
-use PHPPdf\Core\Node\NodeFactory;
 use PHPPdf\Core\ComplexAttribute\ComplexAttributeFactory;
-use PHPPdf\Core\FacadeAware;
+use PHPPdf\Core\Document;
 use PHPPdf\Core\Facade;
+use PHPPdf\Core\FacadeAware;
+use PHPPdf\Core\Node\NodeFactory;
+use PHPPdf\DataSource\DataSource;
+use PHPPdf\Parser\Parser;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

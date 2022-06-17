@@ -8,10 +8,8 @@
 
 namespace PHPPdf\Core\Node;
 
+use PHPPdf\Core\Document;
 use PHPPdf\Core\DrawingTaskHeap;
-
-use PHPPdf\Core\Document,
-    PHPPdf\Core\Formatter\Formatter;
 
 /**
  * Standard container element

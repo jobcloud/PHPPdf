@@ -8,9 +8,8 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Formatter\BaseFormatter,
-    PHPPdf\Core\Node as Nodes,
-    PHPPdf\Core\Document;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node as Nodes;
 
 /**
  * Calculates real dimension of compose node

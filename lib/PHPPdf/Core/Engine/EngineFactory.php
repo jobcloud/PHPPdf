@@ -23,7 +23,7 @@ interface EngineFactory
      * 
      * @return Engine
      * 
-     * @throws DomainException
+     * @throws \DomainException
      */
     public function createEngine($type, array $options = array());
 }

@@ -8,11 +8,9 @@
 
 namespace PHPPdf\Core\Node;
 
-use PHPPdf\Exception\LogicException;
-use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Document;
-use PHPPdf\Core\Node\Container;
-use PHPPdf\Core\Formatter\Formatter;
+use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Exception\LogicException;
 
 /**
  * Collection of the pages

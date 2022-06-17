@@ -8,16 +8,13 @@
 
 namespace PHPPdf\Core\Node;
 
-use PHPPdf\Core\Exception\InvalidAttributeException;
-use PHPPdf\Exception\LogicException;
-use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Document;
-use PHPPdf\Core\DrawingTask;
-use PHPPdf\Core\UnitConverter;
+use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Engine\GraphicsContext;
-use PHPPdf\Core\Point;
-use PHPPdf\Core\Formatter\Formatter;
+use PHPPdf\Core\Exception\InvalidAttributeException;
+use PHPPdf\Core\UnitConverter;
+use PHPPdf\Exception\InvalidArgumentException;
+use PHPPdf\Exception\LogicException;
 
 /**
  * Single pdf page

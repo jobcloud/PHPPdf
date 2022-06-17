@@ -8,8 +8,6 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Core\AttributeBag;
-
 /**
  * Constraints encapsulate Attribute and ComplexAttribute Bag in tree structure.
  *

@@ -8,13 +8,13 @@
 
 namespace PHPPdf\Core\Node\Chart;
 
+use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTask;
+use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Engine\GraphicsContext;
+use PHPPdf\Core\Node\Circle;
 use PHPPdf\Core\Point;
 use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\Node\Circle;
-use PHPPdf\Core\Document;
-use PHPPdf\Core\DrawingTaskHeap;
-use PHPPdf\Core\DrawingTask;
 
 class PieChart extends Circle
 {

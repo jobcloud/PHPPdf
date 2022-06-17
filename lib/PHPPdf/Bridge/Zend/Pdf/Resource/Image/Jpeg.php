@@ -10,10 +10,11 @@ namespace PHPPdf\Bridge\Zend\Pdf\Resource\Image;
 
 use PHPPdf\InputStream\FopenInputStream;
 use PHPPdf\InputStream\StringInputStream;
-use ZendPdf\Resource\Image\AbstractImage;
-use ZendPdf\Resource\Image\Jpeg as BaseJpeg;
-use ZendPdf\InternalType;
-use ZendPdf\Exception;
+use LaminasPdf\Resource\Image\AbstractImage;
+use LaminasPdf\Resource\Image\Jpeg as BaseJpeg;
+use LaminasPdf\InternalType;
+use LaminasPdf\Exception;
+use PHPPdf\Exception\Exception as PdfException;
 
 /**
  * Content loading type has been changed, remote files are supported.
@@ -109,7 +110,7 @@ class Jpeg extends BaseJpeg
                 return new FopenInputStream($imageFileName, 'rb');
             }
         }
-        catch(\PHPPdf\Exception $e)
+        catch(PdfException $e)
         {
             return false;
         }

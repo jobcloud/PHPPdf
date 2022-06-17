@@ -8,10 +8,9 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Parser\XmlParser;
 use PHPPdf\Core\ComplexAttribute\ComplexAttributeFactory;
-use PHPPdf\Core\Parser\StylesheetConstraint;
 use PHPPdf\Parser\Exception\ParseException;
+use PHPPdf\Parser\XmlParser;
 
 /**
  * Xml stylesheet parser

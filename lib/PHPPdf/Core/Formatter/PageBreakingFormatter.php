@@ -8,10 +8,9 @@
 
 namespace PHPPdf\Core\Formatter;
 
+use PHPPdf\Core\Document;
 use PHPPdf\Core\Node\ColumnableContainer;
-
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Document;
+use PHPPdf\Core\Node\Node;
 
 /**
  * TODO: refactoring

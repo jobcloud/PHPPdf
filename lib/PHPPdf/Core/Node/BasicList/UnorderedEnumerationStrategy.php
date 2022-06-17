@@ -9,9 +9,7 @@
 namespace PHPPdf\Core\Node\BasicList;
 
 use PHPPdf\Core\Document;
-
-use PHPPdf\Core\Engine\GraphicsContext,
-    PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\Node\BasicList;
 
 /**
  * Enumeration strategy that draws constant text as enumeration element

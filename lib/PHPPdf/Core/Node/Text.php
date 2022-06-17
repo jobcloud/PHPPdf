@@ -8,15 +8,12 @@
 
 namespace PHPPdf\Core\Node;
 
-use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\DrawingTaskHeap;
-use PHPPdf\Core\Node\Node;
-use PHPPdf\Core\UnitConverter;
-use PHPPdf\Core\Node\Paragraph\LinePart;
-use PHPPdf\Core\Formatter\Formatter;
 use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Core\Node\Paragraph\LinePart;
 use PHPPdf\Core\Point;
-use PHPPdf\Core\DrawingTask;
+use PHPPdf\Core\UnitConverter;
+use PHPPdf\Exception\InvalidArgumentException;
 
 /**
  * Text node

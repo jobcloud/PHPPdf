@@ -8,10 +8,9 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Formatter\BaseFormatter,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Util,
-    PHPPdf\Core\Document;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node\Node;
+use PHPPdf\Util;
 
 /**
  * Convert values of some attributes

@@ -8,20 +8,17 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Parser\XmlParser;
+use PHPPdf\Core\ComplexAttribute\ComplexAttributeFactory;
 use PHPPdf\Core\Document;
+use PHPPdf\Core\Node\Behaviour\Factory as BehaviourFactory;
 use PHPPdf\Core\Node\Manager;
-use PHPPdf\Core\Node\NodeWrapper;
-use PHPPdf\Core\Node\Text,
-    PHPPdf\Parser\Exception\ParseException,
-    PHPPdf\Core\Node\NodeFactory,
-    PHPPdf\Core\Node\PageCollection,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Parser\BagContainer,
-    PHPPdf\Core\Parser\Exception as Exceptions,
-    PHPPdf\Core\ComplexAttribute\ComplexAttributeFactory,
-    PHPPdf\Core\Parser\StylesheetConstraint,
-    PHPPdf\Core\Node\Behaviour\Factory as BehaviourFactory;
+use PHPPdf\Core\Node\Node;
+use PHPPdf\Core\Node\NodeFactory;
+use PHPPdf\Core\Node\PageCollection;
+use PHPPdf\Core\Node\Text;
+use PHPPdf\Core\Parser\Exception as Exceptions;
+use PHPPdf\Parser\Exception\ParseException;
+use PHPPdf\Parser\XmlParser;
 
 /**
  * Parse document to graph of Nodes

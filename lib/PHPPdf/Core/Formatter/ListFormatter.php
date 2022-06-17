@@ -8,9 +8,9 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Document,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\Node\Node;
 
 class ListFormatter extends BaseFormatter
 {

@@ -8,8 +8,8 @@
 
 namespace PHPPdf\Core\Node\Behaviour;
 
-use PHPPdf\Exception\RuntimeException;
 use PHPPdf\Core\Node\Manager;
+use PHPPdf\Exception\RuntimeException;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

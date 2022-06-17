@@ -8,10 +8,10 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Node\Text,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\Boundary;
+use PHPPdf\Core\Boundary;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node\Node;
+use PHPPdf\Core\Node\Text;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

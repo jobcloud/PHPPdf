@@ -8,9 +8,8 @@
 
 namespace PHPPdf\Core\Node;
 
-use PHPPdf\Core\DrawingTaskHeap;
-
 use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Parser\DocumentParserListener;
 use PHPPdf\Core\Parser\DocumentParsingContext;
 use PHPPdf\Core\Parser\Exception\DuplicatedIdException;

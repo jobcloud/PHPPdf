@@ -8,22 +8,20 @@
 
 namespace PHPPdf\Core\Node;
 
+use PHPPdf\Core\AttributeBag;
+use PHPPdf\Core\Boundary;
 use PHPPdf\Core\ComplexAttribute\ComplexAttribute;
-use PHPPdf\Exception\OutOfBoundsException;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTask;
+use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Core\Exception\InvalidAttributeException;
+use PHPPdf\Core\Node\Behaviour\Behaviour;
+use PHPPdf\Core\Point;
+use PHPPdf\Core\UnitConverter;
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Exception\LogicException;
-use PHPPdf\Core\AttributeBag;
-use PHPPdf\Core\DrawingTaskHeap;
-use PHPPdf\Core\UnitConverter;
-use PHPPdf\Core\Document;
+use PHPPdf\Exception\OutOfBoundsException;
 use PHPPdf\Util;
-use PHPPdf\Core\Node\Container;
-use PHPPdf\Core\Boundary;
-use PHPPdf\Core\DrawingTask;
-use PHPPdf\Core\Formatter\Formatter;
-use PHPPdf\Core\Node\Behaviour\Behaviour;
-use PHPPdf\Core\Exception\InvalidAttributeException;
-use PHPPdf\Core\Point;
 
 /**
  * Base node class

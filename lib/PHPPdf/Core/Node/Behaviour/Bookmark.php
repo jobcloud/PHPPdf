@@ -8,9 +8,9 @@
 
 namespace PHPPdf\Core\Node\Behaviour;
 
-use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Core\Engine\GraphicsContext;
 use PHPPdf\Core\Node\Node;
+use PHPPdf\Exception\InvalidArgumentException;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

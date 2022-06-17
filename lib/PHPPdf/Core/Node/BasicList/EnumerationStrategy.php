@@ -10,8 +10,8 @@ namespace PHPPdf\Core\Node\BasicList;
 
 
 use PHPPdf\Core\Document;
-use PHPPdf\Core\Engine\GraphicsContext,
-    PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\Engine\GraphicsContext;
+use PHPPdf\Core\Node\BasicList;
 
 /**
  * Strategy of liste enumeration

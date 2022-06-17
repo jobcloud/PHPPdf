@@ -8,13 +8,13 @@
 
 namespace PHPPdf\Core\Node\Paragraph;
 
+use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTask;
 use PHPPdf\Core\DrawingTaskHeap;
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\DrawingTask,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\Point,
-    PHPPdf\Core\Node\Drawable,
-    PHPPdf\Core\Node\Text;
+use PHPPdf\Core\Node\Drawable;
+use PHPPdf\Core\Node\Node;
+use PHPPdf\Core\Node\Text;
+use PHPPdf\Core\Point;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

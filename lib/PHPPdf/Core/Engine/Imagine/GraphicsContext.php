@@ -21,7 +21,7 @@ use PHPPdf\Core\Engine\Image as BaseImage;
 use PHPPdf\Core\Engine\Font as BaseFont;
 use Imagine\Image\Color as ImagineColor;
 use Imagine\Image\FontInterface as ImagineFont;
-use Zend\Barcode\Object\ObjectInterface as Barcode;
+use Laminas\Barcode\Object\ObjectInterface as Barcode;
 
 /**
  * Graphics context for Imagine

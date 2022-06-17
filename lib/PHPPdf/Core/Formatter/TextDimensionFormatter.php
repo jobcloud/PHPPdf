@@ -8,11 +8,9 @@
 
 namespace PHPPdf\Core\Formatter;
 
+use PHPPdf\Core\Document;
 use PHPPdf\Core\Engine\Font;
-use PHPPdf\Core\Formatter\BaseFormatter,
-    PHPPdf\Core\Node as Nodes,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\Formatter\Chain;
+use PHPPdf\Core\Node as Nodes;
 
 /**
  * Calculates text's real dimension

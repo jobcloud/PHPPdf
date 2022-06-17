@@ -8,8 +8,6 @@
 
 namespace PHPPdf\Core\Parser;
 
-use PHPPdf\Cache\Cache;
-
 /**
  * Styleshet constraint with cache feature
  *

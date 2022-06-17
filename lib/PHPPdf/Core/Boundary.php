@@ -8,10 +8,10 @@
 
 namespace PHPPdf\Core;
 
-use PHPPdf\Exception\OutOfBoundsException;
 use PHPPdf\Exception\BadMethodCallException;
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Exception\LogicException;
+use PHPPdf\Exception\OutOfBoundsException;
 
 /**
  * Set of ordered points whom determine boundary and shape of node element.

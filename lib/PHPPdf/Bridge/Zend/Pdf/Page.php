@@ -8,15 +8,15 @@
 
 namespace PHPPdf\Bridge\Zend\Pdf;
 
-use ZendPdf\Page as ZendPage;
-use ZendPdf\InternalType;
+use LaminasPdf\Page as LaminasPdf;
+use LaminasPdf\InternalType;
 
 /**
  * Modified ZendPdf\Page class
  * 
  * Roundings are circles of radius = $radius in contrast to Zend_Pdf.
  */
-class Page extends ZendPage
+class Page extends LaminasPdf
 {
     public function drawRoundedRectangle($x1, $y1, $x2, $y2, $radius,
                                          $fillType = self::SHAPE_DRAW_FILL_AND_STROKE)

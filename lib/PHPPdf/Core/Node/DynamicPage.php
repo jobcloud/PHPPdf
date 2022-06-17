@@ -8,11 +8,9 @@
 
 namespace PHPPdf\Core\Node;
 
-use PHPPdf\Core\UnitConverter;
-use PHPPdf\Core\DrawingTaskHeap;
-use PHPPdf\Core\Node\Page;
-use PHPPdf\Core\Node\PageContext;
 use PHPPdf\Core\Document;
+use PHPPdf\Core\DrawingTaskHeap;
+use PHPPdf\Core\UnitConverter;
 
 /**
  * Page being able to break

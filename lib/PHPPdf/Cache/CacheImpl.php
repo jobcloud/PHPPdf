@@ -8,8 +8,9 @@
 
 namespace PHPPdf\Cache;
 
-use Zend\Cache\StorageFactory;
-use Zend\Cache\Storage\StorageInterface;
+use Laminas\Cache\Service\StorageAdapterFactory;
+use Laminas\Cache\Service\StorageCacheFactory;
+use Laminas\Cache\Storage\StorageInterface;
 use PHPPdf\Exception\RuntimeException;
 
 /**
@@ -65,7 +66,8 @@ class CacheImpl implements Cache
         }
         
         $name = constant($const);
-        
+
+        // leave it like this and see it if fails/being used
         return StorageFactory::adapterFactory($name);
     }
 

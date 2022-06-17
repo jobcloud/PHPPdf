@@ -18,6 +18,9 @@ use Imagine\Image\PointInterface;
  */
 class Point implements PointInterface
 {
+    private $x;
+    private $y;
+
     public function __construct($x, $y)
     {
         $this->x = $x;

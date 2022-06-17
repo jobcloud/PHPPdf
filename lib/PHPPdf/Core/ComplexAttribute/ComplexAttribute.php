@@ -9,13 +9,10 @@
 namespace PHPPdf\Core\ComplexAttribute;
 
 use PHPPdf\Core\Boundary;
-
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Engine\GraphicsContext;
+use PHPPdf\Core\Node\Node;
 use PHPPdf\Exception\InvalidArgumentException;
-
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Node\Page,
-    PHPPdf\Core\Engine\GraphicsContext,
-    PHPPdf\Core\Document;
 
 /**
  * Base class of complex attribute

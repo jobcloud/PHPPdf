@@ -8,9 +8,8 @@
 
 namespace PHPPdf\Core\Node\Table;
 
-use PHPPdf\Core\Node\Container,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Node\Listener;
+use PHPPdf\Core\Node\Container;
+use PHPPdf\Core\Node\Listener;
 
 /**
  * Cell of the row

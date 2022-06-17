@@ -8,11 +8,9 @@
 
 namespace PHPPdf\Core\Node\Paragraph;
 
-use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Core\Node\Node;
 use PHPPdf\Core\Node\Paragraph;
-use PHPPdf\Core\Point;
-use PHPPdf\Core\Document;
+use PHPPdf\Exception\InvalidArgumentException;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>

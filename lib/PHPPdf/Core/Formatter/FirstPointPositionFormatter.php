@@ -8,9 +8,9 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Node as Nodes,
-    PHPPdf\Core\Document;
+use PHPPdf\Core\Document;
+use PHPPdf\Core\Node as Nodes;
+use PHPPdf\Core\Node\Node;
 
 class FirstPointPositionFormatter extends BaseFormatter
 {

@@ -8,11 +8,11 @@
 
 namespace PHPPdf\Core\Node\BasicList;
 
-use PHPPdf\Exception\LogicException;
-use PHPPdf\Core\UnitConverter;
 use PHPPdf\Core\Document;
-use PHPPdf\Core\Node\BasicList;
 use PHPPdf\Core\Engine\GraphicsContext;
+use PHPPdf\Core\Node\BasicList;
+use PHPPdf\Core\UnitConverter;
+use PHPPdf\Exception\LogicException;
 
 /**
  * This enumeration strategy uses image as enumeration element 

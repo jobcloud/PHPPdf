@@ -8,16 +8,15 @@
 
 namespace PHPPdf\Core\Engine\ZF;
 
-use PHPPdf\Exception\RuntimeException;
-
+use LaminasPdf\Outline\AbstractOutline;
+use LaminasPdf\PdfDocument;
 use PHPPdf\Core\Engine\AbstractEngine;
-use PHPPdf\Core\UnitConverter;
-use PHPPdf\Util;
-use PHPPdf\Exception\InvalidResourceException;
 use PHPPdf\Core\Engine\GraphicsContext as BaseGraphicsContext;
-use PHPPdf\Core\Engine\Engine as BaseEngine;
-use ZendPdf\PdfDocument;
-use ZendPdf\Outline\AbstractOutline;
+use PHPPdf\Core\UnitConverter;
+use PHPPdf\Exception\Exception;
+use PHPPdf\Exception\InvalidResourceException;
+use PHPPdf\Exception\RuntimeException;
+use PHPPdf\Util;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>
@@ -150,7 +149,7 @@ class Engine extends AbstractEngine
             
             return $engine;
         }
-        catch(\ZendPdf\Exception $e)
+        catch(Exception $e)
         {
             throw InvalidResourceException::invalidPdfFileException($file, $e);
         }
