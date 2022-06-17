@@ -8,8 +8,6 @@
 
 namespace PHPPdf\Cache;
 
-use Laminas\Cache\Service\StorageAdapterFactory;
-use Laminas\Cache\Service\StorageCacheFactory;
 use Laminas\Cache\Storage\StorageInterface;
 use PHPPdf\Exception\RuntimeException;
 
@@ -24,10 +22,7 @@ class CacheImpl implements Cache
     const ENGINE_APC = 'Apc';
     const ENGINE_MEMCACHED = 'Memcached';
     const ENGINE_FILESYSTEM = 'Filesystem';
-    
-    /**
-     * @var Zend\Cache\Storage\Adapter
-     */
+
     private $adapter;
     
     private $automaticSerialization = true;
