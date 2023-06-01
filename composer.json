@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+        "ext-mbstring": "*",
         "zendframework/zendpdf": "~2.0.0"
     },
     "require-dev": {

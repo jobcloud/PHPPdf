@@ -18,6 +18,7 @@ use PHPPdf\Core\UnitConverter;
 use PHPPdf\Core\Engine\GraphicsContext;
 use PHPPdf\Core\Point;
 use PHPPdf\Core\Formatter\Formatter;
+use ReturnTypeWillChange;
 
 /**
  * Single pdf page
@@ -117,7 +118,7 @@ class Page extends Container
         static::addAttribute('document-template');
     }
 
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
 
@@ -303,6 +304,7 @@ class Page extends Container
         $this->graphicsContext->setLineColor($blackColor);
     }
 
+    #[ReturnTypeWillChange]
     public function getPage()
     {
         return $this;
@@ -318,7 +320,7 @@ class Page extends Container
         throw new LogicException('Page can\'t be broken.');
     }
 
-    public function copy()
+    public function copy(): Node|Container
     {
         $boundary = clone $this->getBoundary();
         $copy = parent::copy();

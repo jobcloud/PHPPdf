@@ -16,7 +16,7 @@ use PHPPdf\Core\Exception\UnregisteredNodeException;
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class NodeFactory implements \Serializable
+class NodeFactory
 {
     private $prototypes = array();
     private $invocationsMethodsOnCreate = array();

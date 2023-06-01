@@ -15,6 +15,7 @@ use PHPPdf\Core\Node\Text,
     PHPPdf\Core\Node\Page,
     PHPPdf\Core\UnitConverter,
     PHPPdf\Core\Document;
+use ReturnTypeWillChange;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>
@@ -39,7 +40,7 @@ abstract class PageText extends Text implements Runtime
         static::addAttribute('offset', 0);
     }
     
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
 
@@ -142,6 +143,7 @@ abstract class PageText extends Text implements Runtime
     {
     }
 
+    #[ReturnTypeWillChange]
     public function getPage()
     {
         if($this->page !== null)

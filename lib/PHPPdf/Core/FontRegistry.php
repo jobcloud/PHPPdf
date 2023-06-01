@@ -9,6 +9,7 @@
 namespace PHPPdf\Core;
 
 use PHPPdf\Exception\InvalidArgumentException;
+use ReturnTypeWillChange;
 
 /**
  * @author Piotr Śliwa <peter.pl7@gmail.com>
@@ -51,6 +52,7 @@ class FontRegistry implements \Countable
         return isset($this->fonts[$name]);
     }
 
+    #[ReturnTypeWillChange]
     public function count()
     {
         return count($this->fonts);

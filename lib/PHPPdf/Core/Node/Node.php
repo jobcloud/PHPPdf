@@ -24,13 +24,14 @@ use PHPPdf\Core\Formatter\Formatter;
 use PHPPdf\Core\Node\Behaviour\Behaviour;
 use PHPPdf\Core\Exception\InvalidAttributeException;
 use PHPPdf\Core\Point;
+use ReturnTypeWillChange;
 
 /**
  * Base node class
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
+abstract class Node implements Drawable, NodeAware, \ArrayAccess
 {
     const MARGIN_AUTO = 'auto';
     const FLOAT_NONE = 'none';
@@ -353,6 +354,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
         return $this->getBoundary()->getMiddlePoint();
     }
 
+    #[ReturnTypeWillChange]
     public function setParent(Container $node)
     {
         $oldParent = $this->parent;
@@ -369,6 +371,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     /**
      * @return Node
      */
+    #[ReturnTypeWillChange]
     public function getParent()
     {
         return $this->parent;
@@ -380,6 +383,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
      * @param string $type Full class name with namespace
      * @return PHPPdf\Core\Node\Node Nearest ancestor in $type
      */
+    #[ReturnTypeWillChange]
     public function getAncestorByType($type)
     {
         $current = $this;
@@ -408,7 +412,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
         return $parent->getChildren();
     }
 
-    public function initialize()
+    public function initialize(): void
     {
         $this->setComplexAttributeBag(new AttributeBag());
     }
@@ -434,7 +438,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     /**
      * Reset state of object
      */
-    public function reset()
+    public function reset(): void
     {
     }
 
@@ -442,6 +446,8 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
      * @return Page Page of current objects
      * @throws LogicException If object has not been attached to any page
      */
+
+    #[ReturnTypeWillChange]
     public function getPage()
     {
         $page = $this->getAncestorByType('\PHPPdf\Core\Node\Page');
@@ -1247,21 +1253,25 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     {
     }
 
+    #[ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return $this->hasAttribute($offset);
     }
 
+    #[ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->getAttribute($offset);
     }
 
+    #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->setAttribute($offset, $value);
     }
 
+    #[ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         $this->setAttribute($offset, null);
@@ -1317,7 +1327,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     /**
      * @return Node Copy of this node
      */
-    public function copy()
+    public function copy(): Node|static
     {
         $copy = clone $this;
         $copy->reset();

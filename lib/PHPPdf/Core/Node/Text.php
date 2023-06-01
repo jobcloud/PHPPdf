@@ -43,7 +43,7 @@ class Text extends Node
         parent::__construct($attributes, $converter);
     }
 
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
         
@@ -224,7 +224,7 @@ class Text extends Node
         return $data;
     }
     
-    public function copy()
+    public function copy(): \PHPPdf\Core\Node\Node|static
     {
         $copy = parent::copy();
 

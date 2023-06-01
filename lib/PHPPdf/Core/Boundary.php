@@ -12,13 +12,14 @@ use PHPPdf\Exception\OutOfBoundsException;
 use PHPPdf\Exception\BadMethodCallException;
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Exception\LogicException;
+use ReturnTypeWillChange;
 
 /**
  * Set of ordered points whom determine boundary and shape of node element.
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
+class Boundary implements \Countable, \Iterator, \ArrayAccess
 {
     private $points = array();
     private $numberOfPoints = 0;
@@ -169,11 +170,13 @@ class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
     /**
      * @return integer Number of points in boundary
      */
+    #[ReturnTypeWillChange]
     public function count()
     {
         return $this->numberOfPoints;
     }
 
+    #[ReturnTypeWillChange]
     public function current()
     {
         $points = $this->getPoints();
@@ -183,6 +186,8 @@ class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
     /**
      * @return array Array of Point objects
      */
+
+    #[ReturnTypeWillChange]
     public function getPoints()
     {
         return $this->points;
@@ -193,21 +198,25 @@ class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
         return $this->offsetGet($i);
     }
 
+    #[ReturnTypeWillChange]
     public function key()
     {
         return $this->current;
     }
 
+    #[ReturnTypeWillChange]
     public function next()
     {
         $this->current++;
     }
 
+    #[ReturnTypeWillChange]
     public function rewind()
     {
         $this->current = 0;
     }
 
+    #[ReturnTypeWillChange]
     public function valid()
     {
         $points = $this->getPoints();
@@ -314,11 +323,13 @@ class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
         return $this->closed;
     }
 
+    #[ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return (is_int($offset) && $offset < $this->numberOfPoints);
     }
 
+    #[ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if(!$this->offsetExists($offset))
@@ -329,11 +340,13 @@ class Boundary implements \Countable, \Iterator, \ArrayAccess, \Serializable
         return $this->points[$offset];
     }
 
+    #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         throw new BadMethodCallException('You can not set point directly.');
     }
 
+    #[ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         throw new BadMethodCallException('You can not unset point directly.');

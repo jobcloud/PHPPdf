@@ -20,7 +20,7 @@ use PHPPdf\Core\ComplexAttribute\Exception\DefinitionNotFoundException;
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class ComplexAttributeFactory implements \Serializable
+class ComplexAttributeFactory
 {
     private $definitions = array();
     private $constructors = array();
@@ -251,7 +251,7 @@ class ComplexAttributeFactory implements \Serializable
 
     public function unserialize($serialized)
     {
-        $definitions = \unserialize($serialized);
+        $definitions = unserialize($serialized);
 
         foreach($definitions as $name => $className)
         {

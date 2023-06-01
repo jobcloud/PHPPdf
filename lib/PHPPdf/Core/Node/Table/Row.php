@@ -108,7 +108,7 @@ class Row extends Container implements Listener
         return $this->getParent()->getWidth();
     }
 
-    public function reset()
+    public function reset(): void
     {
         parent::reset();
         $this->numberOfColumns = 0;

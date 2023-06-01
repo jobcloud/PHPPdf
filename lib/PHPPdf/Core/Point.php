@@ -144,12 +144,12 @@ final class Point implements \ArrayAccess
         return self::getInstance($this->x + $x, $this->y - $y);
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset == 1 || $offset == 0);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         switch($offset)
         {
@@ -162,12 +162,12 @@ final class Point implements \ArrayAccess
         }
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         throw new BadMethodCallException(sprintf('%s class is inmutable.', __CLASS__));
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         throw new BadMethodCallException(sprintf('%s class is inmutable.', __CLASS__));
     }

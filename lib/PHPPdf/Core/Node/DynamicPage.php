@@ -97,7 +97,7 @@ class DynamicPage extends Page
         return $this->numberOfPages;
     }
 
-    public function copy()
+    public function copy(): Node|Container
     {
         $copy = parent::copy();
         $copy->prototype = $this->prototype->copy();
@@ -108,7 +108,7 @@ class DynamicPage extends Page
         return $copy;
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->pages = array();
         $this->currentPage = null;

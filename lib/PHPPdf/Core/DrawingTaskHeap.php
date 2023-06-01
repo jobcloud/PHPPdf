@@ -19,13 +19,15 @@ class DrawingTaskHeap extends \SplHeap
 {
     private $elements = 0;
 
-    public function insert($value)
+    public function insert($value): bool
     {
         $value->setOrder($this->elements++);
         parent::insert($value);
+
+        return true;
     }
 
-    public function compare($value1, $value2)
+    public function compare($value1, $value2): int
     {
         return $value1->compareTo($value2);
     }
