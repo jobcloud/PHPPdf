@@ -9,7 +9,7 @@
 namespace PHPPdf\Core\Node;
 
 use PHPPdf\Exception\InvalidArgumentException;
-use PHPPdf\Core\Node\Table\Cell;
+use PHPPdf\Core\Node\Table\TableCell;
 use PHPPdf\Core\Node\Node;
 use PHPPdf\Core\Node\Table\Row;
 
@@ -59,7 +59,7 @@ class Table extends Container implements Listener
         return parent::add($node);
     }
     
-    private function updateColumnDataIfNecessary(Cell $cell)
+    private function updateColumnDataIfNecessary(TableCell $cell)
     {
         $this->setColumnWidthIfNecessary($cell);
         foreach(array('margin-left', 'margin-right') as $attribute)

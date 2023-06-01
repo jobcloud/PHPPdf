@@ -8,7 +8,7 @@ use PHPPdf\Core\Formatter\TableFormatter,
     PHPPdf\Core\Node\Table\Row,
     PHPPdf\Core\Node\Table,
     PHPPdf\ObjectMother\TableObjectMother,
-    PHPPdf\Core\Node\Table\Cell;
+    PHPPdf\Core\Node\Table\TableCell;
 
 class TableFormatterTest extends \PHPPdf\PHPUnit\Framework\TestCase
 {

@@ -29,7 +29,7 @@ class RowTest extends \PHPPdf\PHPUnit\Framework\TestCase
      */
     public function addingValidChild()
     {
-        $node = new Nodes\Table\Cell();
+        $node = new Nodes\Table\TableCell();
         $this->row->add($node);
 
         $this->assertTrue(count($this->row->getChildren()) > 0);
@@ -100,7 +100,7 @@ class RowTest extends \PHPPdf\PHPUnit\Framework\TestCase
         $i = 0;
         foreach($colspans as $colspan)
         {
-            $cell = $this->getMock('PHPPdf\Core\Node\Table\Cell', array('setNumberOfColumn', 'getColspan'));
+            $cell = $this->getMock('PHPPdf\Core\Node\Table\TableCell', array('setNumberOfColumn', 'getColspan'));
             $cell->expects($this->atLeastOnce())
                  ->method('getColspan')
                  ->will($this->returnValue($colspan));
@@ -142,7 +142,7 @@ class RowTest extends \PHPPdf\PHPUnit\Framework\TestCase
     
     private function cellWithAddListenerExpectation($listener)
     {
-        $cell = $this->getMock('PHPPdf\Core\Node\Table\Cell', array('addListener'));
+        $cell = $this->getMock('PHPPdf\Core\Node\Table\TableCell', array('addListener'));
 
         $cell->expects($this->at(0))
              ->method('addListener')
@@ -191,7 +191,7 @@ class RowTest extends \PHPPdf\PHPUnit\Framework\TestCase
         $cells = array();
         foreach($heights as $height)
         {
-            $cell = $this->getMock('PHPPdf\Core\Node\Table\Cell', array('getHeight'));
+            $cell = $this->getMock('PHPPdf\Core\Node\Table\TableCell', array('getHeight'));
             $cell->expects($this->atLeastOnce())
                  ->method('getHeight')
                  ->will($this->returnValue($height));
@@ -250,7 +250,7 @@ class RowTest extends \PHPPdf\PHPUnit\Framework\TestCase
 
         for($i=0, $count = count($marginsTop); $i<$count; $i++)
         {
-            $cell = $this->getMock('PHPPdf\Core\Node\Table\Cell', array('getMarginTop', 'getMarginBottom'));
+            $cell = $this->getMock('PHPPdf\Core\Node\Table\TableCell', array('getMarginTop', 'getMarginBottom'));
             $cell->expects($this->atLeastOnce())
                  ->method('getMarginTop')
                  ->will($this->returnValue($marginsTop[$i]));

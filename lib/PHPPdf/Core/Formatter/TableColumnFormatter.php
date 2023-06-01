@@ -37,7 +37,7 @@ class TableColumnFormatter extends BaseFormatter
 
         foreach($node->getChildren() as $row)
         {
-            foreach($row->getChildren() as /* @var $cell PHPPdf\Core\Node\Table\Cell */ $cell)
+            foreach($row->getChildren() as /* @var $cell PHPPdf\Core\Node\Table\TableCell */ $cell)
             {
                 $column = $cell->getNumberOfColumn();
                 $colspan = $cell->getColspan();

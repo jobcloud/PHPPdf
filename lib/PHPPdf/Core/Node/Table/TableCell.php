@@ -17,7 +17,7 @@ use PHPPdf\Core\Node\Container,
  * 
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class Cell extends Container
+class TableCell extends Container
 {
     private $listeners = array();
     private $numberOfColumn;

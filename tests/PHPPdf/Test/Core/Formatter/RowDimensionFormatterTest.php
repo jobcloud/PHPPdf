@@ -88,7 +88,7 @@ class RowDimensionFormatterTest extends \PHPPdf\PHPUnit\Framework\TestCase
         {
             $boundary = $this->getBoundaryMockWithEnlargeAsserts($rowHeight - $height);
 
-            $cell = $this->getMock('PHPPdf\Core\Node\Table\Cell', array('getHeight', 'setHeight', 'getBoundary'));
+            $cell = $this->getMock('PHPPdf\Core\Node\Table\TableCell', array('getHeight', 'setHeight', 'getBoundary'));
 
             $cell->expects($this->atLeastOnce())
                  ->method('getBoundary')

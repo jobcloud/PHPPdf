@@ -227,7 +227,7 @@ class Paragraph extends Container
         return $paragraphProduct;
     }
     
-    public function copy()
+    public function copy(): Node|Container
     {
         $copy = parent::copy();
         $copy->lines = array();

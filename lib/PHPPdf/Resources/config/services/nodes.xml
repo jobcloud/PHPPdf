@@ -451,7 +451,7 @@
 				</argument>
 			</call>
 		</service>
-		<service id="phppdf.node.td" class="PHPPdf\Core\Node\Table\Cell" public="false">
+		<service id="phppdf.node.td" class="PHPPdf\Core\Node\Table\TableCell" public="false">
 			<tag name="phppdf.node" />
 			<argument type="collection"></argument>
 			<call method="mergeComplexAttributes">
