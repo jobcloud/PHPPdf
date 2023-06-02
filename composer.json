@@ -16,7 +16,7 @@
     ],
     "require": {
         "ext-mbstring": "*",
-        "jobcloud/zendpdf": "dev-main"
+        "jobcloud/zendpdf": "^1.0.0"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
