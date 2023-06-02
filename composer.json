@@ -16,12 +16,16 @@
     ],
     "require": {
         "ext-mbstring": "*",
-        "zendframework/zendpdf": "~2.0.0"
+        "jobcloud/zendpdf": "dev-main"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
         "phpunit/phpunit": "^9.6.7"
     },
+    "minimum-stability": "dev",
+    "repositories": [
+        {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/ZendPdf.git"}
+    ],
     "suggest": {
         "imagine/imagine": "If you want to use image generating (required version: >=v0.2.6)"
     },
