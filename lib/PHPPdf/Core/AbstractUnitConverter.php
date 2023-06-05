@@ -50,7 +50,7 @@ abstract class AbstractUnitConverter implements UnitConverter
 
     public function convertPercentageValue($percent, $value)
     {
-        if(str_contains($percent, '%'))
+        if(null !== $percent && str_contains($percent, '%'))
         {
             $percent = (double) $percent;
             $percent = $value*$percent / 100;
