@@ -14,19 +14,19 @@
             "email": "peter.pl7@gmail.com"
         }
     ],
+    "repositories": [
+        {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/zendpdf.git"}
+    ],
     "require": {
         "ext-mbstring": "*",
-        "jobcloud/zendpdf": "^1.0.0"
+        "jobcloud/zendpdf": "^2.0.3"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
-        "phpunit/phpunit": "^9.6.7"
+        "phpunit/phpunit": "^8.5.33"
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
-    "repositories": [
-        {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/ZendPdf.git"}
-    ],
     "suggest": {
         "imagine/imagine": "If you want to use image generating (required version: >=v0.2.6)"
     },

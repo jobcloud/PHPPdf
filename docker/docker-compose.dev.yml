@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+    php:
+        container_name: jobcloud-phppdf-php
+        hostname: jobcloud-phppdf-php
+        build:
+            dockerfile: php/Dockerfile
+            context: ./
+            args:
+                USER_ID: ${USER_ID}
+        ports:
+            - '8080:80'
+        tty: true
+        volumes:
+            - ../:/var/www/html
+            - ~/.bash_aliases:/home/www-data/.bash_aliases:rw
+            - ~/.bash_history:/home/www-data/.bash_history:rw
+        secrets:
+            - ssh_host_key
+        environment:
+            XDEBUG_CONFIG: remote_host=${XDEBUG_REMOTE_HOST}
+            PHP_IDE_CONFIG: serverName=php
+secrets:
+    ssh_host_key:
+        file: ~/.ssh/id_rsa
