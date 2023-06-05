@@ -36,7 +36,7 @@ class TableFormatter extends BaseFormatter
         {
             $diffBetweenTableAndColumnsWidths = $tableWidth - $totalWidth - $totalMargins;
             $translate = 0;
-            foreach($row->getChildren() as /* @var $cell PHPPdf\Core\Node\Table\Cell */ $cell)
+            foreach($row->getChildren() as /* @var $cell PHPPdf\Core\Node\Table\TableCell */ $cell)
             {
                 $column = $cell->getNumberOfColumn();
                 $colspan = $cell->getColspan();

@@ -2,7 +2,7 @@
 
 namespace PHPPdf\Test\Core\Node;
 
-use PHPPdf\Core\Node\Table\Cell;
+use PHPPdf\Core\Node\Table\TableCell;
 use PHPPdf\Core\Node\Node;
 use PHPPdf\Core\Node\Table;
 
@@ -12,7 +12,7 @@ class CellTest extends \PHPPdf\PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->cell = new Cell();
+        $this->cell = new TableCell();
     }
 
     /**
@@ -72,6 +72,6 @@ class CellTest extends \PHPPdf\PHPUnit\Framework\TestCase
 
         $this->cell->setAttribute('width', 100);
         $this->cell->setAttribute('width', 200);
-        $this->cell->setParent(new Cell());
+        $this->cell->setParent(new TableCell());
     }
 }

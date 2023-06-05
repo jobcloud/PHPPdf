@@ -9,6 +9,7 @@
 namespace PHPPdf\Core\Parser;
 
 use PHPPdf\Core\AttributeBag;
+use ReturnTypeWillChange;
 
 /**
  * Constraints encapsulate Attribute and ComplexAttribute Bag in tree structure.
@@ -99,6 +100,7 @@ class StylesheetConstraint extends BagContainer implements \Countable
         return $this->constraints;
     }
 
+    #[ReturnTypeWillChange]
     public function count()
     {
         return count($this->getConstraints());

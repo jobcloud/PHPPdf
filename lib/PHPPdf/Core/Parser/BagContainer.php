@@ -16,7 +16,7 @@ use PHPPdf\Core\AttributeBag;
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class BagContainer implements \Serializable
+class BagContainer
 {
     protected $attributeBag;
     protected $weight;

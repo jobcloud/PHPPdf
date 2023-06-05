@@ -22,7 +22,7 @@ class Paragraph extends Container
 {
     private $lines = array();
     
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
         $this->setAttribute('text-align', null);
@@ -227,7 +227,7 @@ class Paragraph extends Container
         return $paragraphProduct;
     }
     
-    public function copy()
+    public function copy(): Node|Container
     {
         $copy = parent::copy();
         $copy->lines = array();

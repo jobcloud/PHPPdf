@@ -10,7 +10,7 @@ namespace PHPPdf\Core\Node\Table;
 
 use PHPPdf\Exception\InvalidArgumentException;
 use PHPPdf\Core\Document;
-use PHPPdf\Core\Node\Table\Cell;
+use PHPPdf\Core\Node\Table\TableCell;
 use PHPPdf\Core\Node\Container;
 use PHPPdf\Core\Node\Listener;
 use PHPPdf\Core\Node\Node;
@@ -29,7 +29,7 @@ class Row extends Container implements Listener
         'margin-bottom' => 0,
     );
     
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
         
@@ -38,9 +38,9 @@ class Row extends Container implements Listener
 
     public function add(Node $node)
     {
-        if(!$node instanceof Cell)
+        if(!$node instanceof TableCell)
         {
-            throw new InvalidArgumentException(sprintf('Invalid child node type, expected PHPPdf\Core\Node\Table\Cell, %s given.', get_class($node)));
+            throw new InvalidArgumentException(sprintf('Invalid child node type, expected PHPPdf\Core\Node\Table\TableCell, %s given.', get_class($node)));
         }
 
         $node->setNumberOfColumn($this->numberOfColumns);
@@ -61,7 +61,7 @@ class Row extends Container implements Listener
         return parent::add($node);
     }
 
-    private function setMaxHeightOfCellsIfHeightOfPassedCellIsGreater(Cell $node)
+    private function setMaxHeightOfCellsIfHeightOfPassedCellIsGreater(TableCell $node)
     {
         $height = $node->getHeight();
 
@@ -71,7 +71,7 @@ class Row extends Container implements Listener
         }
     }
 
-    private function setCellMarginIfNecessary(Cell $cell, $marginType)
+    private function setCellMarginIfNecessary(TableCell $cell, $marginType)
     {
         $margin = $cell->getAttribute($marginType);
 
@@ -108,7 +108,7 @@ class Row extends Container implements Listener
         return $this->getParent()->getWidth();
     }
 
-    public function reset()
+    public function reset(): void
     {
         parent::reset();
         $this->numberOfColumns = 0;

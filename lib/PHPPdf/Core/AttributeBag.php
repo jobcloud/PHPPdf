@@ -8,12 +8,14 @@
 
 namespace PHPPdf\Core;
 
+use ReturnTypeWillChange;
+
 /**
  * Bag of attributes
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-class AttributeBag implements \Countable, \Serializable
+class AttributeBag implements \Countable
 {
     private $elements = array();
 
@@ -39,6 +41,7 @@ class AttributeBag implements \Countable, \Serializable
         return $this;
     }
 
+    #[ReturnTypeWillChange]
     public function count()
     {
         return count($this->elements);

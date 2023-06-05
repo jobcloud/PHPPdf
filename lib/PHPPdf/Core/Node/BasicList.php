@@ -200,7 +200,7 @@ class BasicList extends Container
         return $node;
     }
     
-    public function copy()
+    public function copy(): Node|Container
     {
         $node = parent::copy();
         $node->setOmitEnumerationOfFirstElement(false);

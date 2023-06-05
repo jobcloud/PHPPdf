@@ -309,7 +309,7 @@
 	            <post class="PHPPdf\Core\Formatter\RowDimensionFormatter" />
 	        </formatters>
 	    </node>
-	    <node name="td" class="PHPPdf\Core\Node\Table\Cell">
+	    <node name="td" class="PHPPdf\Core\Node\Table\TableCell">
 	        <stylesheet>
 	            <complex-attribute name="border" color="#000000" size="1px" />
 	        </stylesheet>

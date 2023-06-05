@@ -8,17 +8,12 @@
 
 namespace PHPPdf\Core\Formatter;
 
-use PHPPdf\Core\Formatter\Formatter,
-    PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Document,
-    PHPPdf\Core\Formatter\Chain;
-
 /**
  * Base formatter class
  *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
-abstract class BaseFormatter implements Formatter, \Serializable
+abstract class BaseFormatter implements Formatter
 {
     public function serialize()
     {

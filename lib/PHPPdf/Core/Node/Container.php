@@ -60,7 +60,7 @@ class Container extends Node
         $this->children = array();
     }
 
-    public function reset()
+    public function reset(): void
     {
         parent::reset();
 
@@ -83,7 +83,7 @@ class Container extends Node
         }
     }
 
-    public function copy()
+    public function copy(): Node|Container
     {
         $copy = parent::copy();
 
