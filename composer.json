@@ -18,7 +18,11 @@
         {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/zendpdf.git"}
     ],
     "require": {
+        "php": "^8.1",
+        "ext-iconv": "*",
+        "ext-libxml": "*",
         "ext-mbstring": "*",
+        "ext-xmlreader": "*",
         "jobcloud/zendpdf": "^2.0.3"
     },
     "require-dev": {
