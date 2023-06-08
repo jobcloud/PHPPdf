@@ -12,33 +12,36 @@ use PHPPdf\Exception\InvalidArgumentException;
 
 /**
  * Unit converter
- * 
+ *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
 class PdfUnitConverter extends AbstractUnitConverter
 {
     private $dpi;
     private $unitsPerPixel;
-    
+
     public function __construct($dpi = 96)
     {
-        if(!is_int($dpi) || $dpi < 1)
-        {
+        if (!is_int($dpi) || $dpi < 1) {
             throw new InvalidArgumentException(sprintf('Dpi must be positive integer, "%s" given.', $dpi));
         }
 
         $this->dpi = $dpi;
-        $this->unitsPerPixel = self::UNITS_PER_INCH/$this->dpi;
+        $this->unitsPerPixel = self::UNITS_PER_INCH / $this->dpi;
     }
-    
+
+    /**
+     * @param string|float|int|null $value
+     * @param string|null           $unit
+     * @return float|int|string
+     */
     public function convertUnit($value, $unit = null)
     {
-        if(is_numeric($value) && $unit === null)
-        {
+        if (is_numeric($value) && $unit === null) {
             return $value;
         }
-        
-        $unit = $unit ? : strtolower(substr($value, -2, 2));
+
+        $unit = $unit ?: strtolower(substr((string) $value, -2, 2));
 
         return $this->doConvertUnit($value, $unit);
     }
@@ -51,16 +54,16 @@ class PdfUnitConverter extends AbstractUnitConverter
 
     protected function convertInUnit($value)
     {
-        return ((float) $value)*self::UNITS_PER_INCH;
+        return ((float) $value) * self::UNITS_PER_INCH;
     }
-       
+
     protected function convertPtUnit($value)
     {
         return (float) $value;
     }
-    
+
     protected function convertMmUnit($value)
     {
-        return $this->convertInUnit($value)/self::MM_PER_INCH;
+        return $this->convertInUnit($value) / self::MM_PER_INCH;
     }
 }
