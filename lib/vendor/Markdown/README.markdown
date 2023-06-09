@@ -158,9 +158,9 @@ swapping the old "markdown.php" file for the new one.
 Here is a short non-exhaustive list of some programs and where they 
 hide the "markdown.php" file.
 
-| Program   | Path to Markdown
-| -------   | ----------------
-| [Pivot][] | `(site home)/pivot/includes/markdown/`
+| Program   | Path to Markdown                       |
+|-----------|----------------------------------------|
+| [Pivot][] | `(site home)/pivot/includes/markdown/` |
 
 If you're unsure if you can do this with your application, ask the 
 developer, or wait for the developer to update his application or 

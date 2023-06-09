@@ -17,7 +17,7 @@ use PHPPdf\Core\DrawingTaskHeap;
 
 /**
  * Barcode node class
- * 
+ *
  * @author Piotr Śliwa <peter.pl7@gmail.com>
  */
 class Barcode extends Node
@@ -187,15 +187,17 @@ class Barcode extends Node
                 'factor' => (float) $this->getAttribute('factor'),
                 'backgroundColor' => $backgroundColor,
             ));
-            
+
             return $barcode;
-        }
-        catch(\Laminas\Barcode\Exception $e)
-        {
-            throw new InvalidArgumentException('Invalid arguments passed to barcode, see cause exception for more details.', $previous->getCode(), $e);
+        } catch(\Laminas\Barcode\Exception $e) {
+            throw new InvalidArgumentException(
+                'Invalid arguments passed to barcode, see cause exception for more details.',
+                $e->getPrevious()->getCode(),
+                $e
+            );
         }
     }
-    
+
     private function convertBarcodeColor(Document $document, $color)
     {
         return strtoupper($document->getColorFromPalette($color));;

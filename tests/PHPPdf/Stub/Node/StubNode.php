@@ -6,7 +6,7 @@ use PHPPdf\Core\Node\Node;
 
 class StubNode extends Node
 {
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
         $this->addAttribute('name-two');
@@ -15,6 +15,6 @@ class StubNode extends Node
 
     public function setNameTwo($value)
     {
-        $this->setAttributeDirectly('name-two', $value.' from setter');
+        $this->setAttributeDirectly('name-two', $value . ' from setter');
     }
 }
