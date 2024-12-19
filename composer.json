@@ -23,7 +23,7 @@
         "ext-libxml": "*",
         "ext-mbstring": "*",
         "ext-xmlreader": "*",
-        "jobcloud/zendpdf": "dev-feat/PRO-1403/resolve-dependency-hell"
+        "jobcloud/zendpdf": "^3.0.0"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
