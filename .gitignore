@@ -2,6 +2,7 @@
 .project
 .idea
 .settings
+.env
 TODO
 *.iml
 examples/advisio*
