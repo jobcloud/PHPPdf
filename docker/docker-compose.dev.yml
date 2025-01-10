@@ -1,4 +1,3 @@
-version: '3.9'
 services:
     php:
         container_name: jobcloud-phppdf-php
@@ -22,4 +21,4 @@ services:
             PHP_IDE_CONFIG: serverName=php
 secrets:
     ssh_host_key:
-        file: ~/.ssh/id_rsa
+        file: ${SSH_PRIVATE_FILE}
