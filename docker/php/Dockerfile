@@ -1,4 +1,4 @@
-FROM php:8.3-alpine3.20
+FROM php:8.3-alpine3.21
 
 ARG USER_ID
 
