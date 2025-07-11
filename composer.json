@@ -27,7 +27,7 @@
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
-        "phpunit/phpunit": "^8.5.41"
+        "phpunit/phpunit": "^8.5.42"
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
