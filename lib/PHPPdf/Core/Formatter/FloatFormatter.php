@@ -196,7 +196,7 @@ class FloatFormatter extends BaseFormatter
             if($overflowed)
             {
                 $preferredYCoord = $sibling->getDiagonalPoint()->getY() - $node->getPaddingTop() - ($sibling->getMarginBottom() + $node->getMarginTop());
-                $preferredXCoord = $this->correctXCoordWithParent($node, $sibling);
+                $preferredXCoord = $this->correctXCoordWithParent($node);
             }
         }
         else
