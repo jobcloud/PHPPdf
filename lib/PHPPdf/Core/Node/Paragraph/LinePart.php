@@ -66,7 +66,7 @@ class LinePart implements Drawable
     }
     
     /**
-     * @param float Word spacing in units
+     * @param float $wordSpacing Word spacing in units
      */
     public function setWordSpacing($wordSpacing)
     {
@@ -185,11 +185,8 @@ class LinePart implements Drawable
         if($this->text !== $text)
         {
             $oldText = $this->text;
-            
-            if($oldText)
-            {
-                $oldText->removeLinePart($this);
-            }
+
+            $oldText?->removeLinePart($this);
             
             $this->text = $text;
             $text->addLinePart($this);

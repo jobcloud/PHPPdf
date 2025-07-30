@@ -155,7 +155,7 @@ class Document extends AbstractStringFilterContainer implements Engine
     {
         if($this->isProcessed())
         {
-            throw new LogicException(sprintf('Pdf has alredy been drawed.'));
+            throw new LogicException('Pdf has alredy been drawed.');
         }
 
         $this->processed = true;

@@ -263,7 +263,7 @@ class Tiff extends BaseTiff
         \ZendPdf\Resource\Image::__construct();
 
         $imageDictionary = $this->_resource->dictionary;
-        if(!isset($this->_width) || !isset($this->_width)) {
+        if(!isset($this->_width) || !isset($this->_height)) {
             throw new Exception\CorruptedImageException('Problem reading tiff file. Tiff is probably corrupt.');
         }
 

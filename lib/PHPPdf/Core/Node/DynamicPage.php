@@ -29,9 +29,9 @@ class DynamicPage extends Page
     private $nodeFormattingMap = array();
     private $numberOfPages = 0;
 
-    public function __construct(Page $prototype = null, UnitConverter $unitConverter = null)
+    public function __construct(?Page $prototype = null, ?UnitConverter $unitConverter = null)
     {
-        $this->setPrototypePage($prototype ? $prototype : new Page(array(), $unitConverter));
+        $this->setPrototypePage($prototype ?: new Page([], $unitConverter));
         static::initializeTypeIfNecessary();
         $this->initialize();
     }

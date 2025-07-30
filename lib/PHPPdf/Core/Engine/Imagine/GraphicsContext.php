@@ -326,7 +326,7 @@ class GraphicsContext extends AbstractGraphicsContext
     private function linear($x, $x1, $y1, $factor)
     {
         // y = (y2 - y1)(x - x1)/(x2 - x1) + y1
-        return $factor*($x - $x1) + $y1;;
+        return $factor*($x - $x1) + $y1;
     }
     
     private function createColor($color)

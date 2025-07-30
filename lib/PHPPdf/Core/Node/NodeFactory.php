@@ -95,7 +95,7 @@ class NodeFactory
     /**
      * Create copy of node stored under passed name
      *
-     * @param string Name/key of prototype
+     * @param string $name Name/key of prototype
      * 
      * @return Node Deep copy of node stored under passed name
      * @throws PHPPdf\Exception\UnregisteredNodeException If prototype with passed name dosn't exist

@@ -51,7 +51,7 @@ class EngineFactoryImpl implements EngineFactory
 
                 $imagineClass = sprintf('Imagine\%s\Imagine', $engine);   
 
-                if(!class_exists($imagineClass, true))
+                if(!class_exists($imagineClass))
                 {
                     throw new DomainException(sprintf('Unknown image engine type "%s" or Imagine library is not installed.', $engine));
                 }

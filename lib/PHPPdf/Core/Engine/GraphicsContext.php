@@ -50,12 +50,12 @@ interface GraphicsContext
     public function setFont(Font $font, $size);
 
     /**
-     * @param string String representing color
+     * @param string $color String representing color
      */
     public function setFillColor($color);
 
     /**
-     * @param string String representing color
+     * @param string $color String representing color
      */
     public function setLineColor($color);
     

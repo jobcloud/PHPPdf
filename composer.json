@@ -10,24 +10,25 @@
     "authors": [
         {
             "name": "Piotr Śliwa",
-            "homepage": "http://ohey.pl",
+            "homepage": "https://ohey.pl",
             "email": "peter.pl7@gmail.com"
         }
     ],
     "repositories": [
+        {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/laminas-memory.git"},
         {"type": "vcs", "no-api": true, "url": "git@github.com:jobcloud/zendpdf.git"}
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "ext-iconv": "*",
         "ext-libxml": "*",
         "ext-mbstring": "*",
         "ext-xmlreader": "*",
-        "jobcloud/zendpdf": "^3.0.0"
+        "jobcloud/zendpdf": "^4.0.0"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
-        "phpunit/phpunit": "^8.5.42"
+        "phpunit/phpunit": "^8.5.44"
     },
     "prefer-stable": true,
     "minimum-stability": "dev",

@@ -70,11 +70,6 @@ class Container extends Node
         }
     }
 
-    protected function preDraw(Document $document, DrawingTaskHeap $tasks)
-    {
-        parent::preDraw($document, $tasks);
-    }
-
     protected function doDraw(Document $document, DrawingTaskHeap $tasks)
     {
         foreach($this->children as $node)

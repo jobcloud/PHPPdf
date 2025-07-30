@@ -30,8 +30,8 @@ class ConvertAttributesFormatter extends BaseFormatter
 
     protected function convertPercentageDimensions(Node $node)
     {
-        $parentWidth = $node->getParent() ? $node->getParent()->getWidthWithoutPaddings() : null;
-        $parentHeight = $node->getParent() ? $node->getParent()->getHeightWithoutPaddings() : null;
+        $parentWidth = $node->getParent()?->getWidthWithoutPaddings();
+        $parentHeight = $node->getParent()?->getHeightWithoutPaddings();
 
         $node->convertScalarAttribute('width', $parentWidth);
         $node->convertScalarAttribute('height', $parentHeight);

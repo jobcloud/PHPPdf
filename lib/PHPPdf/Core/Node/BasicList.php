@@ -78,7 +78,7 @@ class BasicList extends Container
      * 
      * Implementation of this method also clears enumeration strategy property
      * 
-     * @param string List type
+     * @param string $type List type
      */
     public function setType($type)
     {

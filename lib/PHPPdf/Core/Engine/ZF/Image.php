@@ -31,9 +31,9 @@ class Image implements BaseImage
      * Constructor
      * 
      * @param string $path Path to image
-     * @param UnitConverter $unitConverter Converter that converts image's size from pixels to standard unit
+     * @param UnitConverter|null $unitConverter Converter that converts image's size from pixels to standard unit
      */
-    public function __construct($path, UnitConverter $unitConverter = null)
+    public function __construct($path, ?UnitConverter $unitConverter = null)
     {
         $this->path = $path;
         $this->unitConverter = $unitConverter;

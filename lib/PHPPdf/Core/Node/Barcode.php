@@ -200,7 +200,7 @@ class Barcode extends Node
 
     private function convertBarcodeColor(Document $document, $color)
     {
-        return strtoupper($document->getColorFromPalette($color));;
+        return strtoupper($document->getColorFromPalette($color));
     }
     
     private function getOrientation()

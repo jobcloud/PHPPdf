@@ -301,11 +301,8 @@ class GraphicsContext extends AbstractGraphicsContext
     
     protected function doSetLineDashingPattern($pattern)
     {
-        switch($pattern)
-        {
-            case self::DASHING_PATTERN_DOTTED:
-                $pattern = array(1, 2);
-                break;
+        if ($pattern == self::DASHING_PATTERN_DOTTED) {
+            $pattern = [1, 2];
         }
         
         if($this->state['lineDashingPattern'] === null || $this->state['lineDashingPattern'] !== $pattern)

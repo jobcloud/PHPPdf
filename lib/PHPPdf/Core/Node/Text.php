@@ -36,7 +36,7 @@ class Text extends Node
     
     private $childTexts = array();
 
-    public function __construct($text = '', array $attributes = array(), UnitConverter $converter = null)
+    public function __construct($text = '', array $attributes = [], ?UnitConverter $converter = null)
     {
         $this->setText($text);
         
@@ -156,7 +156,7 @@ class Text extends Node
     {
         if(count($words) != count($sizes))
         {
-            throw new InvalidArgumentException(sprintf('Words and sizes of words arrays have to have the same length.'));
+            throw new InvalidArgumentException('Words and sizes of words arrays have to have the same length.');
         }
 
         $this->words = $words;

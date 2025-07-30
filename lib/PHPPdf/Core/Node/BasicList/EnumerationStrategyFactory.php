@@ -18,7 +18,7 @@ use PHPPdf\Core\Node\BasicList;
 class EnumerationStrategyFactory
 {
     /**
-     * @param string Type of enumeration strategy
+     * @param string $type Type of enumeration strategy
      * @return EnumerationStrategy
      */
     public function create($type)

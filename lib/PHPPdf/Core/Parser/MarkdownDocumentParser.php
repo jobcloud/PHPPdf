@@ -28,7 +28,7 @@ class MarkdownDocumentParser implements DocumentParser, FacadeAware
     private $documentTemplateFilepath;
     private $facade;
     
-    public function __construct(DocumentParser $documentParser, Parser $markdownParser = null)
+    public function __construct(DocumentParser $documentParser, ?Parser $markdownParser = null)
     {        
         $this->documentParser = $documentParser;        
         $this->markdownParser = $markdownParser ? : new MarkdownParser();

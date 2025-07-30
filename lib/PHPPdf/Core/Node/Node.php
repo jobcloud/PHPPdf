@@ -87,7 +87,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
 
     private $preFormatInvoked = false;
 
-    public function __construct(array $attributes = array(), UnitConverter $converter = null)
+    public function __construct(array $attributes = [], ?UnitConverter $converter = null)
     {
         static::initializeTypeIfNecessary();
 
@@ -173,10 +173,10 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
     
     protected static function setDefaultAttributes()
     {
-        static::addAttribute('width', null);
-        static::addAttribute('height', null);
-        static::addAttribute('max-width', null);
-        static::addAttribute('max-height', null);
+        static::addAttribute('width');
+        static::addAttribute('height');
+        static::addAttribute('max-width');
+        static::addAttribute('max-height');
 
         static::addAttribute('min-width', 0);
 
@@ -200,29 +200,29 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
         static::addAttribute('breakable', true);
 
         static::addAttribute('line-height');
-        static::addAttribute('text-align', null);
+        static::addAttribute('text-align');
 
         static::addAttribute('float', self::FLOAT_NONE);
-        static::addAttribute('font-style', null);
+        static::addAttribute('font-style');
         static::addAttribute('static-size', false);
         static::addAttribute('break', false);
         
-        static::addAttribute('vertical-align', null);
+        static::addAttribute('vertical-align');
         
-        static::addAttribute('text-decoration', null);
+        static::addAttribute('text-decoration');
         
         static::addAttribute('dump', false);
         
-        static::addAttribute('alpha', null);
-        static::addAttribute('rotate', null);
+        static::addAttribute('alpha');
+        static::addAttribute('rotate');
         
         static::addAttribute('line-break', false);
         
         static::addAttribute('position', self::POSITION_STATIC);
-        static::addAttribute('left', null);
-        static::addAttribute('top', null);
-        static::addAttribute('right', null);
-        static::addAttribute('bottom', null);
+        static::addAttribute('left');
+        static::addAttribute('top');
+        static::addAttribute('right');
+        static::addAttribute('bottom');
     }
 
     public function setUnitConverter(UnitConverter $unitConverter)
@@ -358,10 +358,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
     public function setParent(Container $node)
     {
         $oldParent = $this->parent;
-        if($oldParent)
-        {
-            $oldParent->remove($this);
-        }
+        $oldParent?->remove($this);
 
         $this->parent = $node;
 
@@ -1104,7 +1101,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
     /**
      * Make snapshot of attribute's map
      */
-    public function makeAttributesSnapshot(array $attributeNames = null)
+    public function makeAttributesSnapshot(?array $attributeNames = null)
     {
         if($attributeNames === null)
         {
@@ -1560,7 +1557,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
     /**
      * Gets child under passed index
      * 
-     * @param integer Index of child
+     * @param integer $index Index of child
      * 
      * @return Node
      * @throws OutOfBoundsException Child dosn't exist

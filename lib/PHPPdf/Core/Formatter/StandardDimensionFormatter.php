@@ -50,7 +50,7 @@ class StandardDimensionFormatter extends BaseFormatter
 
         $parent = $node->getParent();
 
-        $parentWidth = $parent ? $parent->getWidthWithoutPaddings() : null;
+        $parentWidth = $parent?->getWidthWithoutPaddings();
 
         if ($parent && $parentWidth < $prefferedWidth) {
             $prefferedWidth = $parentWidth;

@@ -21,7 +21,7 @@ class ResourcePathStringFilter implements StringFilter
     
     public function filter($value)
     {
-        return str_replace('%resources%', $this->getPathToResources(), $value);;
+        return str_replace('%resources%', $this->getPathToResources(), $value);
     }
     
     private function getPathToResources()
