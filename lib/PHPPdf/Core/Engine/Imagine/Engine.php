@@ -23,11 +23,11 @@ use PHPPdf\Core\Engine\GraphicsContext as BaseGraphicsContext;
 class Engine extends AbstractEngine
 {
     private $imagine;
-    private $graphicsContexts = array();
+    private $graphicsContexts = [];
     private $outputFormat;
     private $renderOptions;
     
-    public function __construct(ImagineInterface $imagine, $outputFormat, UnitConverter $unitConverter = null, array $renderOptions = array())
+    public function __construct(ImagineInterface $imagine, $outputFormat, ?UnitConverter $unitConverter = null, array $renderOptions = [])
     {
         parent::__construct($unitConverter);
         $this->imagine = $imagine;

@@ -25,7 +25,7 @@ abstract class PageText extends Text implements Runtime
     private $evaluated = false;
     private $page = null;
 
-    public function  __construct(array $attributes = array(), UnitConverter $converter = null)
+    public function  __construct(array $attributes = [], ?UnitConverter $converter = null)
     {
         parent::__construct('', $attributes, $converter);
     }

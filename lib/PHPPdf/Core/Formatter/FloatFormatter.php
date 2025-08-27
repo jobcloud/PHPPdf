@@ -149,7 +149,7 @@ class FloatFormatter extends BaseFormatter
         return $floatedSibling;
     }
 
-    private function setNodesWithFloatPosition(Node $node, &$preferredXCoord, &$preferredYCoord, Node $previousSiblingWithTheSameFloat = null)
+    private function setNodesWithFloatPosition(Node $node, &$preferredXCoord, &$preferredYCoord, ?Node $previousSiblingWithTheSameFloat = null)
     {
         $sibling = $previousSiblingWithTheSameFloat;
         $parent = $node->getParent();

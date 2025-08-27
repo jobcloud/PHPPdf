@@ -17,7 +17,7 @@ final class NodeWrapper implements NodeAware
 {
     private $node;
     
-    public function __construct(Node $node = null)
+    public function __construct(?Node $node = null)
     {
         $this->node = $node;
     }

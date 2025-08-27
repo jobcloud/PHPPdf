@@ -69,7 +69,7 @@ class CacheImpl implements Cache
         return StorageFactory::adapterFactory($name);
     }
 
-    private function cacheEngineDosntExistException($engine, \Exception $e = null)
+    private function cacheEngineDosntExistException($engine, ?\Exception $e = null)
     {
         return new RuntimeException(sprintf('Cache engine "%s" dosn\'t exist.', $engine), 1, $e);
     }

@@ -45,9 +45,9 @@ class FacadeBuilder extends AbstractStringFilterContainer
 
     private $engineFactory;
     private $engineType = EngineFactoryImpl::TYPE_PDF;
-    private $engineOptions = array();
+    private $engineOptions = [];
 
-    private function __construct(Loader $configurationLoader = null, EngineFactory $engineFactory = null)
+    private function __construct(?Loader $configurationLoader = null, ?EngineFactory $engineFactory = null)
     {
         $this->stringFilters[] = new ResourcePathStringFilter();
 
@@ -86,11 +86,9 @@ class FacadeBuilder extends AbstractStringFilterContainer
     }
 
     /**
-     * Static constructor
-     * 
      * @return FacadeBuilder
      */
-    public static function create(Loader $configuration = null, EngineFactory $engineFactory = null)
+    public static function create(?Loader $configuration = null, ?EngineFactory $engineFactory = null)
     {
         return new self($configuration, $engineFactory);
     }

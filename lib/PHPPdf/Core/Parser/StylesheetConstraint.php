@@ -81,8 +81,8 @@ class StylesheetConstraint extends BagContainer implements \Countable
     /**
      * Adds constraints with given tag
      * 
-     * @param string Constraint tag
-     * @param StylesheetConstraint Constraint to add
+     * @param string $tag Constraint tag
+     * @param StylesheetConstraint $constraint Constraint to add
      */
     public function addConstraint($tag, StylesheetConstraint $constraint)
     {

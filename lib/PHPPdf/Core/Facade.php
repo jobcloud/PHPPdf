@@ -147,7 +147,7 @@ class Facade extends AbstractStringFilterContainer
      * 
      * @throws PHPPdf\Exception\Exception
      */
-    public function render($documentContent, $stylesheetContents = array(), $colorPaletteContent = null)
+    public function render($documentContent, $stylesheetContents = [], $colorPaletteContent = null)
     {
         $colorPalette = new ColorPalette((array) $this->configurationLoader->createColorPalette());
         
@@ -292,7 +292,7 @@ class Facade extends AbstractStringFilterContainer
         return $stylesheetConstraint;
     }
 
-    private function updateStylesheetConstraintCacheIfNecessary(StylesheetConstraint $constraint = null)
+    private function updateStylesheetConstraintCacheIfNecessary(?StylesheetConstraint $constraint = null)
     {
         if($constraint && $this->useCacheForStylesheetConstraint && $constraint->isResultMapModified())
         {

@@ -21,7 +21,7 @@ class PageInfo extends PageText
 
         static::addAttribute('dummy-number', 'no.');
         static::addAttribute('format', '%s / %s');
-        static::addAttribute('text-align', null);
+        static::addAttribute('text-align');
     }
 
     protected function refreshDummyText()

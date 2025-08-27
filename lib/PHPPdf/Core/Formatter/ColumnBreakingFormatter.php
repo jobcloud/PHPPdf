@@ -105,7 +105,7 @@ class ColumnBreakingFormatter extends BaseFormatter
         while($container);
     }
     
-    private function getBreakYCoord(ColumnableContainer $columnableContainer, $numberOfBreaks, Container $container = null)
+    private function getBreakYCoord(ColumnableContainer $columnableContainer, $numberOfBreaks, ?Container $container = null)
     {
         $numberOfColumns = $columnableContainer->getAttribute('number-of-columns');
         

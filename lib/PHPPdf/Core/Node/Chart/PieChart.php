@@ -94,7 +94,7 @@ class PieChart extends Circle
                     
                     $gc->saveGS();
                     $gc->setFillColor($color);
-                    $gc->drawArc($point->getX(), $point->getY(), $node->getWidth(), $node->getHeight(), $start, $end, GraphicsContext::SHAPE_DRAW_FILL);
+                    $gc->drawArc($point->getX(), $point->getY(), $node->getWidth(), $node->getHeight(), $start, $end);
                     $gc->restoreGS();
 
                     $start = $end;
