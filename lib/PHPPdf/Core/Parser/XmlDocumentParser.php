@@ -11,16 +11,13 @@ namespace PHPPdf\Core\Parser;
 use PHPPdf\Parser\XmlParser;
 use PHPPdf\Core\Document;
 use PHPPdf\Core\Node\Manager;
-use PHPPdf\Core\Node\NodeWrapper;
 use PHPPdf\Core\Node\Text,
     PHPPdf\Parser\Exception\ParseException,
     PHPPdf\Core\Node\NodeFactory,
     PHPPdf\Core\Node\PageCollection,
     PHPPdf\Core\Node\Node,
-    PHPPdf\Core\Parser\BagContainer,
     PHPPdf\Core\Parser\Exception as Exceptions,
     PHPPdf\Core\ComplexAttribute\ComplexAttributeFactory,
-    PHPPdf\Core\Parser\StylesheetConstraint,
     PHPPdf\Core\Node\Behaviour\Factory as BehaviourFactory;
 
 /**
@@ -57,7 +54,9 @@ class XmlDocumentParser extends XmlParser implements DocumentParser
     private $isPreviousText = false;
     
     private $currentParagraph = null;
-    
+
+    private $prototypes = [];
+
     private $document;
     
     private $listeners = array();

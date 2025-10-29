@@ -10,10 +10,7 @@ namespace PHPPdf\Core\Node;
 
 use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\Node\BasicList\EnumerationStrategyFactory;
-use PHPPdf\Core\Node\BasicList\ImageEnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\EnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\OrderedEnumerationStrategy,
-    PHPPdf\Core\Node\BasicList\UnorderedEnumerationStrategy,
+use PHPPdf\Core\Node\BasicList\EnumerationStrategy,
     PHPPdf\Core\Document,
     PHPPdf\Core\DrawingTask;
 
@@ -38,6 +35,7 @@ class BasicList extends Container
     const LIST_POSITION_OUTSIDE = 'outside';
     
     private $enumerationStrategy;
+    private $enumerationStrategyFactory;
     private $omitEnumerationOfFirstElement = false;
 
     protected static function setDefaultAttributes()
