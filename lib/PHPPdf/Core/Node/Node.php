@@ -17,10 +17,8 @@ use PHPPdf\Core\DrawingTaskHeap;
 use PHPPdf\Core\UnitConverter;
 use PHPPdf\Core\Document;
 use PHPPdf\Util;
-use PHPPdf\Core\Node\Container;
 use PHPPdf\Core\Boundary;
 use PHPPdf\Core\DrawingTask;
-use PHPPdf\Core\Formatter\Formatter;
 use PHPPdf\Core\Node\Behaviour\Behaviour;
 use PHPPdf\Core\Exception\InvalidAttributeException;
 use PHPPdf\Core\Point;
@@ -86,6 +84,8 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess
     private $positionTranslation = null;
 
     private $preFormatInvoked = false;
+
+    private $drawingTasks = [];
 
     public function __construct(array $attributes = [], ?UnitConverter $converter = null)
     {
