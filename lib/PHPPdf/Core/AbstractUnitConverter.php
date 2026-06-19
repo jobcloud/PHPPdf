@@ -52,7 +52,7 @@ abstract class AbstractUnitConverter implements UnitConverter
     {
         if(null !== $percent && str_contains($percent, '%'))
         {
-            $percent = (double) $percent;
+            $percent = (float) $percent;
             $percent = $value*$percent / 100;
         }
         return $percent;

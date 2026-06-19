@@ -136,7 +136,7 @@ class Png extends BasePng
                     $this->seek(4); //4 Byte Ending Sequence
                     break;
 
-                case 'IEND';
+                case 'IEND':
                     break 2; //End the loop too
 
                 default:

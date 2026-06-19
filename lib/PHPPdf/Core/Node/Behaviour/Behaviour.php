@@ -53,7 +53,7 @@ abstract class Behaviour
 
     public function setPassive($flag)
     {
-        $this->passive = (boolean) $flag;
+        $this->passive = (bool) $flag;
     }
     
     public function getUniqueId()

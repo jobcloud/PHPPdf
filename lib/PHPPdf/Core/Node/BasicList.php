@@ -68,7 +68,7 @@ class BasicList extends Container
      */
     public function setOmitEnumerationOfFirstElement($flag)
     {
-        $this->omitEnumerationOfFirstElement = (boolean) $flag;
+        $this->omitEnumerationOfFirstElement = (bool) $flag;
     }
     
     /**

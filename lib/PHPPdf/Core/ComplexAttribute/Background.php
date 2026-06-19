@@ -79,7 +79,7 @@ class Background extends ComplexAttribute
             return true;
         }
         
-        $numericValue = (string) (double) $value;
+        $numericValue = (string) (float) $value;
         
         return $numericValue === substr($value, 0, strlen($numericValue));
     }

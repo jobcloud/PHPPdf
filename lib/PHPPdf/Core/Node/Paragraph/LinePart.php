@@ -125,13 +125,13 @@ class LinePart implements Drawable
                 case Node::TEXT_DECORATION_NONE:
                     $lineDecorationYTranslation = false;
                     break;
-                case Node::TEXT_DECORATION_UNDERLINE;
+                case Node::TEXT_DECORATION_UNDERLINE:
                     $lineDecorationYTranslation = -1;
                     break;
                 case Node::TEXT_DECORATION_LINE_THROUGH:
                     $lineDecorationYTranslation = $fontSize / 3;
                     break;
-                case Node::TEXT_DECORATION_OVERLINE;
+                case Node::TEXT_DECORATION_OVERLINE:
                     $lineDecorationYTranslation = $fontSize - 1;
                     break;
                 default:
