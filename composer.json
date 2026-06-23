@@ -24,7 +24,7 @@
         "ext-libxml": "*",
         "ext-mbstring": "*",
         "ext-xmlreader": "*",
-        "jobcloud/zendpdf": "dev-chore/PRO-3271/PHP85-compatibility"
+        "jobcloud/zendpdf": "^5.0.0"
     },
     "require-dev": {
         "imagine/imagine": ">=0.2.0,<0.6.0",
