@@ -26,7 +26,7 @@ final class Util
     {
         $knownValues = array('true' => true, 'false' => false, 1 => true, 0 => false, '1' => true, '0' => false, 'yes' => true, 'no' => false);
 
-        return isset($knownValues[$value]) ? $knownValues[$value] : (boolean) $value;
+        return isset($knownValues[$value]) ? $knownValues[$value] : (bool) $value;
     }
     
     /**
